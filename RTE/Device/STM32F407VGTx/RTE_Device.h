@@ -160,10 +160,10 @@
 
 // <e> USART2 (Universal synchronous asynchronous receiver transmitter) [Driver_USART2]
 // <i> Configuration settings for Driver_USART2 in component ::CMSIS Driver:USART
-#define RTE_USART2                      0
+#define RTE_USART2                      1
 
 //   <o> USART2_TX Pin <0=>Not Used <1=>PA2 <2=>PD5
-#define RTE_USART2_TX_ID                0
+#define RTE_USART2_TX_ID                1
 #if    (RTE_USART2_TX_ID == 0)
 #define RTE_USART2_TX                   0
 #elif  (RTE_USART2_TX_ID == 1)
@@ -179,7 +179,7 @@
 #endif
 
 //   <o> USART2_RX Pin <0=>Not Used <1=>PA3 <2=>PD6
-#define RTE_USART2_RX_ID                0
+#define RTE_USART2_RX_ID                1
 #if    (RTE_USART2_RX_ID == 0)
 #define RTE_USART2_RX                   0
 #elif  (RTE_USART2_RX_ID == 1)
@@ -1015,7 +1015,7 @@
 
 // <e> I2C1 (Inter-integrated Circuit Interface 1) [Driver_I2C1]
 // <i> Configuration settings for Driver_I2C1 in component ::CMSIS Driver:I2C
-#define RTE_I2C1                        0
+#define RTE_I2C1                        1
 
 //   <o> I2C1_SCL Pin <0=>PB6 <1=>PB8
 #define RTE_I2C1_SCL_PORT_ID            0
