@@ -1,0 +1,9 @@
+.\objects\nunchuck.o: nunchuck.c
+.\objects\nunchuck.o: nunchuck.h
+.\objects\nunchuck.o: C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.0.0\Board\Board_LED.h
+.\objects\nunchuck.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\nunchuck.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Driver\Include\Driver_USART.h
+.\objects\nunchuck.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Driver\Include\Driver_Common.h
+.\objects\nunchuck.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\nunchuck.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\nunchuck.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Driver\Include\Driver_I2C.h

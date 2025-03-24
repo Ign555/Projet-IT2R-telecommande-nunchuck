@@ -1,5 +1,6 @@
 --cpu Cortex-M4.fp
 ".\objects\main.o"
+".\objects\nunchuck.o"
 ".\objects\led_f4discovery.o"
 ".\objects\i2c_stm32f4xx.o"
 ".\objects\usart_stm32f4xx.o"
