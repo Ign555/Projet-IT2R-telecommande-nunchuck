@@ -33,7 +33,8 @@ ARM_I2C_BUS_SPEED_STANDARD ); // =100 kHz
 int main(){
 	int i;
 	char RxChar, jx=0, jy=0, button=0, data;
-	uint8_t handcheck1[2] = {0x40, 0x00};
+	uint8_t handcheck1[2] = {0xF0, 0x55};
+	uint8_t handcheck2[2] = {0xFB, 0x00};
 	uint8_t askX[1] = {0x00};
 	uint8_t askY[1] = {0x01};
 	uint8_t askButton[1] = {0x05};
@@ -43,6 +44,8 @@ int main(){
 	
 	//Envoyer le handshake
 	Driver_I2C1.MasterTransmit (0x52, handcheck1, 2, false); // true = sans stop
+	while (Driver_I2C1.GetStatus().busy == 1); // attente fin transmission
+	Driver_I2C1.MasterTransmit (0x52, handcheck2, 2, false); // true = sans stop
 	while (Driver_I2C1.GetStatus().busy == 1); // attente fin transmission
 	Driver_I2C1.MasterReceive (0x52, &data, 1, false); // false = avec stop
 	while (Driver_I2C1.GetStatus().busy == 1); // attente fin transmission*/

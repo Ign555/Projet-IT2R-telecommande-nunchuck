@@ -30,19 +30,19 @@ Build target 'Target 1'
 compiling main.c...
 main.c(13): warning:  #167-D: argument of type "void (*)()" is incompatible with parameter of type "ARM_USART_SignalEvent_t"
   	Driver_USART2.Initialize(callback_UART); //On utilise la fonction de callback définie plus haut
-main.c(47): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+main.c(50): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
   	Driver_I2C1.MasterReceive (0x52, &data, 1, 
 alse); // false = avec stop
-main.c(64): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+main.c(67): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
   		Driver_I2C1.MasterReceive (0x52, &jx, 1, 
 alse); // false = avec stop
-main.c(70): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+main.c(73): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
   		Driver_I2C1.MasterReceive (0x52, &jy, 1, 
 alse); // false = avec stop
-main.c(76): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+main.c(79): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
   		Driver_I2C1.MasterReceive (0x52, &button, 1, 
 alse); // false = avec stop
-main.c(85): warning:  #1-D: last line of file ends without a newline
+main.c(88): warning:  #1-D: last line of file ends without a newline
   }
 main.c(34): warning:  #177-D: variable "i" was declared but never referenced
   	int i;
@@ -50,7 +50,7 @@ main.c(35): warning:  #177-D: variable "RxChar" was declared but never reference
   	char RxChar, jx=0, jy=0, button=0, data;
 main.c: 8 warnings, 0 errors
 linking...
-Program Size: Code=14748 RO-data=728 RW-data=16 ZI-data=1728  
+Program Size: Code=14788 RO-data=728 RW-data=16 ZI-data=1728  
 ".\Objects\Telecommande-nunchuck.axf" - 0 Error(s), 8 Warning(s).
 
 <h2>Software Packages used:</h2>
