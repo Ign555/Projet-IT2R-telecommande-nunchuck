@@ -80,6 +80,6 @@ int main(){
 		Driver_USART2.Send(&jx,1); // send the read characters
 		Driver_USART2.Send(&jy,1); // send the read characters
 		Driver_USART2.Send(&button,1); // send the read characters
-		for(i=0;i<10000;i++);
+
 	}
 }
