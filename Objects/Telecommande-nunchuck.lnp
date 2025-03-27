@@ -2,8 +2,8 @@
 ".\objects\main.o"
 ".\objects\nunchuck.o"
 ".\objects\led_f4discovery.o"
-".\objects\i2c_stm32f4xx.o"
 ".\objects\usart_stm32f4xx.o"
+".\objects\i2c_stm32f4xx.o"
 ".\objects\stm32f4xx_hal.o"
 ".\objects\stm32f4xx_hal_cortex.o"
 ".\objects\stm32f4xx_hal_gpio.o"
@@ -15,8 +15,8 @@
 ".\objects\system_stm32f4xx.o"
 ".\objects\stm32f4xx_hal_dma.o"
 ".\objects\stm32f4xx_hal_dma_ex.o"
-".\objects\stm32f4xx_hal_i2c.o"
 ".\objects\stm32f4xx_hal_usart.o"
+".\objects\stm32f4xx_hal_i2c.o"
 --strict --scatter ".\Objects\Telecommande-nunchuck.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

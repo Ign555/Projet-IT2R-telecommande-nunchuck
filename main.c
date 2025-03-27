@@ -40,8 +40,16 @@ int main(){
 	
 	while(1){
 		//Driver_USART2.Receive(&RxChar,1);
+		// à optimiser
+		Driver_I2C1.MasterTransmit (0x52, askX, 1, false); // true = sans stop
+		while (Driver_I2C1.GetStatus().busy == 1); // attente fin transmission
+		Driver_I2C1.MasterReceive (0x52, &jx, 1, false); // false = avec stop
+		while (Driver_I2C1.GetStatus().busy == 1); // attente fin transmission*/
 		
-		
+		Driver_I2C1.MasterTransmit (0x52, askY, 1, false); // true = sans stop
+		while (Driver_I2C1.GetStatus().busy == 1); // attente fin transmission
+		Driver_I2C1.MasterReceive (0x52, &jy, 1, false); // false = avec stop
+		while (Driver_I2C1.GetStatus().busy == 1); // attente fin transmission*/
 		
 		//Lecture des boutons
 		Driver_I2C1.MasterTransmit (0x52, askButton, 1, false); // true = sans stop
@@ -50,8 +58,17 @@ int main(){
 		while (Driver_I2C1.GetStatus().busy == 1); // attente fin transmission*/
 		button &= 0x03;
 		
+		while(Driver_USART2.GetStatus().tx_busy == 1);
+		Driver_USART2.Send("x",1); // send the read characters
+		while(Driver_USART2.GetStatus().tx_busy == 1);
 		Driver_USART2.Send(&jx,1); // send the read characters
+		while(Driver_USART2.GetStatus().tx_busy == 1);
+		Driver_USART2.Send("y",1); // send the read characters
+		while(Driver_USART2.GetStatus().tx_busy == 1);
 		Driver_USART2.Send(&jy,1); // send the read characters
+		while(Driver_USART2.GetStatus().tx_busy == 1);
+		Driver_USART2.Send("b",1); // send the read characters
+		while(Driver_USART2.GetStatus().tx_busy == 1);
 		Driver_USART2.Send(&button,1); // send the read characters
 
 	}
