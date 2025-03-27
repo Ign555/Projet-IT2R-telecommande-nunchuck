@@ -36,28 +36,28 @@ nunchuck.h(17): warning:  #1295-D: Deprecated declaration Nunchuck_joystick_y - 
   uint8_t Nunchuck_joystick_y();
 nunchuck.h(19): warning:  #1-D: last line of file ends without a newline
   #endif
-main.c(11): warning:  #167-D: argument of type "void (*)()" is incompatible with parameter of type "ARM_USART_SignalEvent_t"
+main.c(16): warning:  #167-D: argument of type "void (*)()" is incompatible with parameter of type "ARM_USART_SignalEvent_t"
   	Driver_USART2.Initialize(callback_UART); //On utilise la fonction de callback définie plus haut
-main.c(46): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+main.c(53): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
   		Driver_I2C1.MasterReceive (0x52, &jx, 1, 
 alse); // false = avec stop
-main.c(51): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+main.c(58): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
   		Driver_I2C1.MasterReceive (0x52, &jy, 1, 
 alse); // false = avec stop
-main.c(57): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+main.c(65): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
   		Driver_I2C1.MasterReceive (0x52, &button, 1, 
 alse); // false = avec stop
 main.c(75): warning:  #1-D: last line of file ends without a newline
   }
-main.c(24): warning:  #177-D: variable "i" was declared but never referenced
+main.c(29): warning:  #177-D: variable "i" was declared but never referenced
   	int i;
-main.c(25): warning:  #177-D: variable "RxChar" was declared but never referenced
+main.c(30): warning:  #177-D: variable "RxChar" was declared but never referenced
   	char RxChar, jx=0, jy=0, button=0, data;
-main.c(25): warning:  #177-D: variable "data" was declared but never referenced
+main.c(30): warning:  #177-D: variable "data" was declared but never referenced
   	char RxChar, jx=0, jy=0, button=0, data;
 main.c: 12 warnings, 0 errors
 linking...
-Program Size: Code=14916 RO-data=728 RW-data=16 ZI-data=1728  
+Program Size: Code=15160 RO-data=728 RW-data=16 ZI-data=1728  
 ".\Objects\Telecommande-nunchuck.axf" - 0 Error(s), 12 Warning(s).
 
 <h2>Software Packages used:</h2>
@@ -82,14 +82,14 @@ Package Vendor: Keil
                 STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
    * Component: STM32Cube Framework Version: 1.0.0
    * Component: Classic Version: 1.7.6
-   * Component: Startup Version: 2.6.3
    * Component: Common Version: 1.7.6
-   * Component: GPIO Version: 1.7.6
-   * Component: I2C Version: 1.7.6
+   * Component: Startup Version: 2.6.3
    * Component: PWR Version: 1.7.6
    * Component: Cortex Version: 1.7.6
-   * Component: DMA Version: 1.7.6
+   * Component: I2C Version: 1.7.6
+   * Component: GPIO Version: 1.7.6
    * Component: RCC Version: 1.7.6
+   * Component: DMA Version: 1.7.6
    * Component: USART Version: 1.7.6
    * Component: LED Version: 2.0.0
    * Component: USART Version: 2.12
@@ -120,32 +120,26 @@ Package Vendor: Keil
    * Component: ::Device:STM32Cube Framework:1.0.0 (API)
 
    * Component: Keil::Device:STM32Cube Framework:Classic:1.7.6
-      Source file:   MDK\Templates\Src\main.c
-      Source file:   MDK\Templates\Src\stm32f4xx_hal_msp.c
-      Include file:  MDK\Templates\Inc\stm32f4xx_hal_conf.h
-      Include file:  MDK\Templates_LL\Inc\main.h
-      Source file:   MDK\Templates_LL\Src\main.c
       Source file:   MDK\Templates\Src\stm32f4xx_it.c
-      Include file:  MDK\Templates\Inc\stm32f4xx_it.h
-      Include file:  CMSIS\Driver\Config\RTE_Device.h
       Include file:  MDK\Templates\Inc\main.h
-
-   * Component: Keil::Device:Startup:2.6.3
-      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f407xx.s
-      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
-      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
-      Source file:   MDK\Device\Source\ARM\STM32F40xxx_41xxx_OPT.s
-      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
+      Include file:  MDK\Templates_LL\Inc\main.h
+      Include file:  CMSIS\Driver\Config\RTE_Device.h
+      Include file:  MDK\Templates\Inc\stm32f4xx_it.h
+      Include file:  MDK\Templates\Inc\stm32f4xx_hal_conf.h
+      Source file:   MDK\Templates\Src\stm32f4xx_hal_msp.c
+      Source file:   MDK\Templates\Src\main.c
+      Source file:   MDK\Templates_LL\Src\main.c
 
    * Component: Keil::Device:STM32Cube HAL:Common:1.7.6
-      Include file:  Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h
       Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c
+      Include file:  Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h
 
-   * Component: Keil::Device:STM32Cube HAL:GPIO:1.7.6
-      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c
-
-   * Component: Keil::Device:STM32Cube HAL:I2C:1.7.6
-      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_i2c.c
+   * Component: Keil::Device:Startup:2.6.3
+      Source file:   MDK\Device\Source\ARM\STM32F40xxx_41xxx_OPT.s
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f407xx.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
 
    * Component: Keil::Device:STM32Cube HAL:PWR:1.7.6
       Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c
@@ -154,13 +148,19 @@ Package Vendor: Keil
    * Component: Keil::Device:STM32Cube HAL:Cortex:1.7.6
       Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c
 
-   * Component: Keil::Device:STM32Cube HAL:DMA:1.7.6
-      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c
-      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c
+   * Component: Keil::Device:STM32Cube HAL:I2C:1.7.6
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_i2c.c
+
+   * Component: Keil::Device:STM32Cube HAL:GPIO:1.7.6
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c
 
    * Component: Keil::Device:STM32Cube HAL:RCC:1.7.6
-      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c
       Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c
+
+   * Component: Keil::Device:STM32Cube HAL:DMA:1.7.6
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c
 
    * Component: Keil::Device:STM32Cube HAL:USART:1.7.6
       Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_usart.c
