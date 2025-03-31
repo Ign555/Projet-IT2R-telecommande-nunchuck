@@ -70,7 +70,7 @@ int main(){
 		sprintf(buff, "sx%cy%cb%ce", jx, jy, button);
 		while(Driver_USART2.GetStatus().tx_busy == 1);
 		Driver_USART2.Send(buff,8); // send the read characters
-	  wait(100000); //D?lai pour ne pas surcharger le HC-05
+	  wait(75000); //D?lai pour ne pas surcharger le HC-05
 
 	}
 }
